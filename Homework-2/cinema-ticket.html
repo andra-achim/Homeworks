@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Homework Two</title>
+    <style>
+        fieldset {
+            width: 50%;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        button {
+            width: 52%;
+            height: 34px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cinema tickets</h1>
+    <form action="" method="POST">
+        <fieldset>
+            <legend>Contact details</legend>
+            <label for="firstName">First name</label>
+            <input class="textInput" id="firstName" name="firstName" type="text" placeholder="First Name" />
+
+            <label for="lastName">Last name</label>
+            <input class="textInput" id="lastName" name="lastName" type="text" placeholder="Last Name" />
+
+            <label for="email">Email</label>
+            <input class="textInput" id="email" name="email" type="email" placeholder="Email" />
+
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="+40 (744) 123 456" maxlength="15" />
+        </fieldset>
+        <fieldset>
+            <legend>Choose a movie</legend>
+            <label> <input name="godzilla" type="radio" value="godzilla" /> Godzilla</label>
+            <label> <input name="aladin" type="radio" value="aladin" /> Aladin</label>
+            <label> <input name="avengers" type="radio" value="avengers" /> Avengers</label>
+            <label> <input name="rocketman" type="radio" value="rocketman" /> Rocketman</label>
+            <label> <input name="spiderMan" type="radio" value="spiderMan" /> Spider-man</label>
+        </fieldset>
+        <fieldset>
+            <legend>Choose location</legend>
+            <label>
+                <select id="location" name="location">
+                    <option value="" disabled selected>Choose location</option>
+                    <option value="cinemaCityIulius">Cinema City - Iulius</option>
+                    <option value="cinemaCityVivo">Cinema City - Vivo</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Terms and conditions</legend>
+            <label> <input name="acceptTerms" type="checkbox" value="acceptTerms" /> I have read and agreed with the
+                terms and conditions.</label>
+        </fieldset>
+        <button type="submit">Buy tickets</button>
+    </form>
+</body>
+
+</html>
