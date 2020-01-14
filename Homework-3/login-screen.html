@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>Homework Three</title>
+    <style>
+        .logo {
+            width: 26px;
+            height: 26px;
+            margin-top: 10px;
+            margin-left: 16px;
+        }
+
+        h3 {
+            margin: 24px auto 6px 16px;
+        }
+
+        .loginText {
+            margin-top: 4px;
+            margin-left: 16px;
+            font-size: 13px;
+            color: rgb(150, 150, 150);
+        }
+
+        body {
+            background-color: rgb(230, 230, 230);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .box {
+            box-sizing: border-box;
+            width: 310px;
+            height: 370px;
+            background-color: white;
+            margin: 50px auto 50px auto;
+            padding: 20px 10px 20px 10px;
+            box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+            border-radius: 1.5%;
+        }
+
+        .textInput {
+            margin: 16px;
+            padding: 2px 4px 2px 4px;
+            width: 260px;
+            border-width: 0px 0px 1.5px 0px;
+        }
+
+        .textInput:focus {
+            border-color: blue;
+            border-width: 0px 0px 1.5px 0px;
+            outline: none;
+        }
+
+        .forgotPassword {
+            margin-left: 16px;
+            color: #0C71E0;
+            font-size: 12px;
+        }
+
+        .button {
+            width: 100%;
+            margin-top: 50px;
+            margin-left: 16px;
+            width: 260px;
+            background-color: #0859C6;
+            color: white;
+            padding: 8px;
+            border: none;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <form action="" method="POST">
+            <img class="logo"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZp1t1Tx5NlqbDmBXVWWE7pacev_w45V0wzIh4l5lpR_7tLZTyLA&s"
+                alt="Checkmark logo" />
+            <h3>Welcome back!</h3>
+            <p class="loginText">Log in to continue.</p>
+
+            <label for="email"></label>
+            <input class="textInput" id="email" name="email" type="email" placeholder="Email" />
+
+            <label for="password"></label>
+            <input class="textInput" id="password" name="password" type="password" placeholder="Password" />
+
+            <a class="forgotPassword" href="https://abcd.com" target="_blank">Forgot your password?</a>
+            <button class="button">Sign in</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
