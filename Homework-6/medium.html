@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Medium</title>
+</head>
+
+<body>
+    <script>
+
+        var currentHour = new Date().getHours();
+
+        function hello() {
+            if (currentHour < 12) {
+                console.log("Good morning!");
+            } else if (currentHour > 12 && currentHour < 18) {
+                console.log("Good afternoon!");
+            } else {
+                console.log("Good evening!");
+            }
+        }
+
+        hello();
+
+    </script>
+</body>
+
+</html>
