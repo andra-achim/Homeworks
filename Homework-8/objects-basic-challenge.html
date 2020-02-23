@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Objects basic challenge</title>
+</head>
+
+<body>
+    <script>
+        var animal = {
+            type: "dog",
+            name: "Rex",
+            gut: ["meat", "bones"]
+        }
+        var food;
+        var extraFood = ["milk", "rice"];
+
+        function eat(food) {
+            animal.gut.push(...food);
+        }
+
+        eat(extraFood);
+
+        console.log(animal.gut);
+    </script>
+</body>
+
+</html>

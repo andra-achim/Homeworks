@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Medium challenge</title>
+</head>
+
+<body>
+    <script>
+        var firstNames = ['John', 'Matthew', 'Thomas', 'Christian', 'David'];
+        var lastNames = ['Smith', 'Pitt', 'Cruise', 'Robinson'];
+
+        var randomFirstName = generateRandomFirstName();
+        var randomLastName = generateRandomLastName();
+
+        function generateRandomFirstName() {
+            for (var i = 0; i < firstNames.length; i++) {
+                var randomFirstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+            }
+            return randomFirstName;
+        }
+
+        // console.log(randomFirstName);
+
+        function generateRandomLastName() {
+            for (var i = 0; i < lastNames.length; i++) {
+                var randomLastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+            }
+            return randomLastName;
+        }
+
+        // console.log(randomLastName);
+
+        function generateRandomFullName() {
+            return randomFirstName.concat(' ' + randomLastName);
+        }
+
+        console.log(generateRandomFullName());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Arrays basic challenge</title>
+</head>
+
+<body>
+    <script>
+        var array = [-2, 10, 2, 4, -6, 3];
+
+        //First Option
+        var filterAndSum = array.reduce(function (accumulator, element) {
+            if (element > 0) {
+                accumulator = accumulator + element;
+            }
+
+            return accumulator;
+        }, 0);
+
+        console.log(filterAndSum);
+
+
+        //Second option (in order to have the array with positive numbers returned too)
+        var filter = array.reduce(function (accumulator, element) {
+            if (element > 0) {
+                accumulator.push(element);
+            }
+
+            return accumulator;
+        }, []);
+
+        var sumPositiveNumber = filter.reduce(function (accumulator, element) {
+            return accumulator + element;
+        }, 0);
+
+        console.log(filter);
+        console.log(sumPositiveNumber);
+
+    </script>
+</body>
+
+</html>
