@@ -6,11 +6,12 @@
 
 <body>
     <script>
-        let array = [1, 2, 3, 4, 5];
+        var array = [1, 2, 3, 4, 5];
 
         //Solution 1
         function reverseElementsFromArray(array) {
-            reversedArray = [];
+            var reversedArray = [];
+
             for (var i = array.length - 1; i >= 0; i--) {
                 reversedArray.push(array[i]);
             }
