@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Basic Challenge</title>
+</head>
+
+<body>
+    <script>
+        let array = [1, 2, 3, 4, 5];
+
+        //Solution 1
+        function reverseElementsFromArray(array) {
+            reversedArray = [];
+            for (var i = array.length - 1; i >= 0; i--) {
+                reversedArray.push(array[i]);
+            }
+            return reversedArray;
+        }
+
+        console.log(reverseElementsFromArray(array));
+
+        //Solution 2 (using reduce)
+        var revesedArray = array.reduce(function (accumulator, element) {
+
+            for (var i = array.length - 1; i >= 0; i--) {
+                accumulator.push(array[i]);
+                array.pop(array[i]);
+            }
+
+            return accumulator;
+        }, [])
+
+        console.log(revesedArray);
+
+    </script>
+</body>
+
+</html>

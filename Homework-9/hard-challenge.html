@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Hard Challenge</title>
+</head>
+
+<body>
+    <script>
+
+        let finalDate = new Date(2021, 0, 1);
+        let currentDate = new Date();
+
+        function calculateRemainingTime() {
+
+            let diffTime = finalDate.getTime() - currentDate.getTime();
+
+            let oneDay = 1000 * 60 * 60 * 24;
+            let oneHour = 1000 * 60 * 60;
+            let oneMin = 1000 * 60;
+            let oneSec = 1000;
+
+            let days = Math.floor(diffTime / oneDay);
+            let hours = Math.floor((diffTime % oneDay) / oneHour);
+            let mins = Math.floor((diffTime % oneHour) / oneMin);
+            let secs = Math.floor((diffTime % oneMin) / oneSec);
+
+            let remainingTime = {
+                days: days,
+                hours: hours,
+                minutes: mins,
+                seconds: secs
+            }
+
+            return remainingTime;
+        }
+
+        console.log(calculateRemainingTime());
+
+    </script>
+</body>
+
+</html>
