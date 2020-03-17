@@ -1,0 +1,45 @@
+Homework MYSQL:
+
+1. CREATE SCHEMA `employees` DEFAULT CHARACTER SET utf8mb4 ;
+
+2. CREATE TABLE `employees`.`employees` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(128) NOT NULL,
+  `dateOfBirth` DATE NOT NULL,
+  `gender` VARCHAR(6) NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `name_INDEX` (`name` ASC) INVISIBLE,
+  INDEX `gender_INDEX` (`gender` ASC) INVISIBLE,
+  INDEX `dateOfBirth_INDEX` (`dateOfBirth` ASC) INVISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+3. insert into employees.employees (name, dateOfBirth, gender) 
+values ('Sophia', '1990-11-04', 'female'), ('Emma', '2001-09-122', 'female'), ('James', '1982-02-01', 'male');
+
+4. CREATE TABLE `employees`.`salaries` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `employeeId` INT UNSIGNED NOT NULL,
+  `amount` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `employeeId_INDEX` (`employeeId` ASC) INVISIBLE,
+  INDEX `amount_INDEX` (`amount` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+ALTER TABLE `employees`.`salaries`
+ADD CONSTRAINT `employeeId`
+FOREIGN KEY (`employeeId`)
+REFERENCES `employees`.`employees` (`id`)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+5. insert into employees.salaries (employeeId, amount) values (1, '9000'), (2, '11000'), (3, '10500');
+
+6. select employees.id, name, dateOfBirth, gender, amount from employees.employees
+join employees.salaries on employees.id = salaries.employeeId
+where salaries.amount > 10000;
+
+
